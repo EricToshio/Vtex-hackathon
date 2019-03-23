@@ -38,4 +38,18 @@
         <ion-label>Theme Your App</ion-label>
       </ion-item>
     </ion-list>
+    <div class="home__feed-wrapper">
+      <ion-grid>
+        <ion-row>
+          <ion-col *ngFor="let number of numbers;" size="4">
+            <div class="home__product__card">
+              <div class="welcome-card">
+                <ion-img src="/assets/tenis.png" height="15px"></ion-img>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+    </div>
 </ion-content>
