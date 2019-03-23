@@ -1,9 +1,45 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+    <ion-searchbar></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-list>
+      <ion-list-header>
+        Favoritos
+      </ion-list-header>
+      <div class="home__feed-wrapper">
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let number of numbers2;" size="3">
+              <div class="home__product__card">
+                <div class="welcome-card">
+                  <ion-img src="/assets/magazineluiza.png" height="15px"></ion-img>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Demais produtos
+      </ion-list-header>
+      <div class="home__feed-wrapper">
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let number of numbers;" size="4">
+              <div class="home__product__card">
+                <div class="welcome-card">
+                  <ion-img src="/assets/magazineluiza.png" height="15px"></ion-img>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+          
+        </ion-grid>
+      </div>
+    </ion-list>
+</ion-content>

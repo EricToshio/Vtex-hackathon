@@ -1,1 +1,11 @@
+.welcome-card ion-img {
+  min-height: 15px;
+  overflow: hidden;
+  border: 1px solid #cacaca;
+  padding: 2px;
+}
+
+ion-col {
+    --ion-grid-column-padding: 1px;
+}
 
