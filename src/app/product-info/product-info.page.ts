@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductInfoPage implements OnInit {
 
-  products: [];
+  products = [];
   index: string;
   constructor(private route: ActivatedRoute) {
     this.products = [

@@ -12,10 +12,10 @@
       <div class="home__feed-wrapper">
         <ion-grid>
           <ion-row>
-            <ion-col *ngFor="let number of numbers2;" size="3">
+            <ion-col *ngFor="let product of products | slice:0:4"; size="3">
               <div class="home__product__card" routerLink="/product-info">
                 <div class="welcome-card">
-                  <ion-img src="/assets/tenis.png" height="15px"></ion-img>
+                  <ion-img src={{product.url}} height="15px"></ion-img>
                 </div>
               </div>
             </ion-col>
