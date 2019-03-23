@@ -12,8 +12,8 @@
       <div class="home__feed-wrapper">
         <ion-grid>
           <ion-row>
-            <ion-col *ngFor="let product of products | slice:0:4"; size="3">
-              <div class="home__product__card" routerLink="/product-info">
+            <ion-col *ngFor="let product of products | slice:0:4; let i = index" size="3">
+              <div class="home__product__card" routerLink="/product-info/{{i}}">
                 <div class="welcome-card">
                   <ion-img src={{product.url}} height="15px"></ion-img>
                 </div>
