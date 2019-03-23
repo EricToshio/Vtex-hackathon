@@ -15,7 +15,7 @@ export class ProductInfoPage implements OnInit {
 
   products = [];
   index: string;
-  isFavorite: false;
+  isFavorite = false;
   constructor(private route: ActivatedRoute, 
     public favoritesData: FavoritesService,
     public toastC: ToastController) {

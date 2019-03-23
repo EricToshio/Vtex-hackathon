@@ -12,6 +12,5 @@ export class Tab2Page {
   constructor(public favoritesData: FavoritesService) {
     this.numbers = Array(20).fill(4);
     this.numbers2 = Array(4).fill(4);
-    console.log("na pagina 2: ", this.favoritesData.getFavorites());
   }
 }

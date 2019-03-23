@@ -65,11 +65,9 @@ export class Tab1Page {
     	url: "/assets/tenis3.png"
     }
     ];
-    console.log("no tab1: ",this.favoritesData.getFavorites());
   }
 
   ionViewWillEnter(){
-    console.log("abriu");
     this.favorites = this.favoritesData.getFavorites();
   }
 }
