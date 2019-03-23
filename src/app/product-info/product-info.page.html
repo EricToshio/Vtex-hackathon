@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start"> <ion-back-button defaultHref="home"></ion-back-button> </ion-buttons>
-    <ion-title>Tênis Nike Mega</ion-title>
+    <ion-title>{{products[index].name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,9 +9,9 @@
 
 	<div class="product-info__img-wrapper">
 		<ion-img src={{products[index].url}}></ion-img>
-		<div class="product-info__discount">
+		<div *ngIf="products[index].hasDiscount" class="product-info__discount">
 			<div class="product-info__discount__background">
-				<h1>15%</h1>
+				<h1>{{products[index].discount}}%</h1>
 				<h2> OFF </h2>
 			</div>
 		</div>
@@ -20,13 +20,13 @@
 		</div>
 	</div>
 	<div class="product-info__infos-wrapper">
-		<h2 text-center> Tênis Nike Mega </h2>
-		<p text-center> Valor: R$ 1000,00 </p>
-		<p text-center> Cor: Preta, Tamanho: 36-42 </p>
+		<h2 text-center> {{products[index].name}} </h2>
+		<p text-center> Valor: R$ {{products[index].price}},00 </p>
+		<p text-center> Detalhes: {{products[index].aditionalInfo}} </p>
 		<a href=""> Ver na loja </a>
 
 	</div>
-	<div class="product-info__qrcode-wrapper">
+	<div *ngIf="products[index].hasDiscount" class="product-info__qrcode-wrapper">
 		<h2 text-center> Apresente o QR Code abaixo para obter desconto na loja </h2>
 		<ion-img src="/assets/qrcode.png"></ion-img>
 	</div>
