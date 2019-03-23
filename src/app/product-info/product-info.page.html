@@ -1,6 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start"> <ion-back-button defaultHref="home"></ion-back-button> </ion-buttons>
+    <!-- <ion-buttons slot="start">
+    	<ion-back-button defaultHref="/app/tabs/tab1"></ion-back-button>
+    	<ion-button href="/app/tabs/tab1"></ion-button>
+    </ion-buttons> -->
+    <ion-icon name="arrow-back" routerLink="/app/tabs/tab1"></ion-icon>
     <ion-title>{{products[index].name}}</ion-title>
   </ion-toolbar>
 </ion-header>

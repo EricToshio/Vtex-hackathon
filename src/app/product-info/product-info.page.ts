@@ -151,7 +151,6 @@ export class ProductInfoPage implements OnInit {
     }
     ];
     this.index = this.route.snapshot.paramMap.get('index');
-    console.log(this.index);
   }
 
   ngOnInit() {
