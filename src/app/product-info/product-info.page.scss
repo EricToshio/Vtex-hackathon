@@ -1,3 +1,35 @@
 .product-info__img-wrapper {
 	padding: 10px;
+	max-height: 500px;
+}
+
+.product-info__discount {
+	width: 70px;
+	position: absolute;
+	top: 300px;
+	right: 10px;
+}
+.product-info__discount__background {
+	// border: 1px solid #000;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: bold;
+	background-color: #00FF00;
+}
+
+.product-info__discount__background h1{
+	font-size: 18px;
+	margin: 0;
+}
+
+.product-info__discount__background h2{
+	font-size: 14px;
+	margin: 0;
+}
+
+.product-info__store {
+	width: 90px;
+	position: absolute;
+	top: 15px;
+	left: 5px;
 }
