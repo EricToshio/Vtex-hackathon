@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FavoritesService } from '../favorites.service';
 
 @Component({
   selector: 'app-tab1',
@@ -12,7 +13,9 @@ export class Tab1Page {
   numbers: any;
   numbers2: any;
   products = [];
-  constructor() {
+  favorites = [];
+  constructor(
+    public favoritesData: FavoritesService) {
     this.numbers = Array(20).fill(4);
     this.numbers2 = Array(4).fill(4);
     this.products = [
@@ -62,5 +65,11 @@ export class Tab1Page {
     	url: "/assets/tenis3.png"
     }
     ];
+    console.log("no tab1: ",this.favoritesData.getFavorites());
+  }
+
+  ionViewWillEnter(){
+    console.log("abriu");
+    this.favorites = this.favoritesData.getFavorites();
   }
 }

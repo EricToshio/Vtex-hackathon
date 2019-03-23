@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
+import { FavoritesService } from '../favorites.service';
+import { ToastController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-product-info',
@@ -12,7 +15,10 @@ export class ProductInfoPage implements OnInit {
 
   products = [];
   index: string;
-  constructor(private route: ActivatedRoute) {
+  isFavorite: false;
+  constructor(private route: ActivatedRoute, 
+    public favoritesData: FavoritesService,
+    public toastC: ToastController) {
     this.products = [
     {
       name: "Guarda roupas",
@@ -154,6 +160,21 @@ export class ProductInfoPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  addFavorite(item) {
+    this.favoritesData.add(this.products[item]);
+    this.presentToast();
+    this.isFavorite = true;
+  }
+
+  async presentToast() {
+    const toast = await this.toastC.create({
+      message: 'Produto adicionado aos favoritos!',
+      duration: 2000,
+      position: 'top'
+    });
+    toast.present();
   }
 
 }
